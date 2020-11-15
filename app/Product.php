@@ -12,7 +12,7 @@ class Product extends Model
         return $this->hasMany('App\Review');
     }
 
-    /* Get the user added product */
+    /* Get the user that added the product */
     public function user()
     {
         return $this->belongsTo('App\User');

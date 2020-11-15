@@ -7,7 +7,6 @@ use App\Review;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
-
 {
     public function __construct()
     {
@@ -26,16 +25,6 @@ class ProductController extends Controller
             ->latest()
             ->paginate(20);
         return response()->json(['products' => $products]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -73,17 +62,6 @@ class ProductController extends Controller
             $query->latest();
         }, 'user']);
         return response()->json(['product' => $product]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Product $product)
-    {
-        //
     }
 
     /**
